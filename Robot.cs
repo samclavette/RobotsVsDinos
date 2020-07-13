@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace RobotsVDinos
 {
@@ -27,5 +28,24 @@ namespace RobotsVDinos
 
         //mem methods (can do)
 
+        public void AttackDino()
+        {
+
+        }
+
+        public void LoseHealth()
+        {
+
+        }
+
+        public void LosePowerLevel()
+        {
+
+        }
+
+        public void GainPowerLevel()
+        {
+
+        }
     }
 }
