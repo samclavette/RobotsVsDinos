@@ -8,8 +8,20 @@ namespace RobotsVDinos
 {
     class Fleet
     {
-        Robot robotOne = new Robot("Wall-E", 100, 25);
-        Robot robotTwo = new Robot("Ultron", 250, 100);
-        Robot robotThree = new Robot("Iron Giant", 200, 75);
+        //mem variables
+
+        Robot robotOne;
+        Robot robotTwo;
+        Robot robotThree;
+
+        //constructor (spawner)
+        public Fleet()
+        {
+            robotOne = new Robot("Wall-E", 100, 25);
+            robotTwo = new Robot("Ultron", 250, 100);
+            robotThree = new Robot("Iron Giant", 200, 75);
+        }
+
+        //mem methods (can do)
     }
 }

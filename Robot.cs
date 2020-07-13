@@ -30,6 +30,7 @@ namespace RobotsVDinos
 
         public void AttackDino()
         {
+            //
 
         }
 
@@ -50,7 +51,8 @@ namespace RobotsVDinos
 
         public void RobotDie()
         {
-            if (robotHealth == 0)
+            if (robotHealth == 0
+                )
             {
                 Console.WriteLine("Robot has died.");
             }
