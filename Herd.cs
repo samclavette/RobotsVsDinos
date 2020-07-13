@@ -8,8 +8,22 @@ namespace RobotsVDinos
 {
     class Herd
     {
-        Dinosaur dinoOne = new Dinosaur("T-Rex", 250, 100, 75);
-        Dinosaur dinoTwo = new Dinosaur("Raptor", 100, 25, 20);
-        Dinosaur dinoThree = new Dinosaur("Mosasaurus", 200, 75, 50);
+        //mem variables 
+
+        Dinosaur dinoOne;
+        Dinosaur dinoTwo;
+        Dinosaur dinoThree;
+
+        //constructor 
+
+        public Herd()
+        {
+            dinoOne = new Dinosaur("T-Rex", 250, 100, 75);
+            dinoTwo = new Dinosaur("Raptor", 100, 25, 20);
+            dinoThree = new Dinosaur("Mosasaurus", 200, 75, 50);
+        }
+
+        //meme methods
     }
+
 }
