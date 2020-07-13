@@ -16,16 +16,18 @@ namespace RobotsVDinos
         int dinoAttackPower;
         bool isAlive;
 
-        //constructor (spawner)
+        // constructor (spawner)
 
         public Dinosaur(string type, int dinoHealth, int dinoEnergy, int dinoAttackPower)
         {
             this.type = type;
             this.dinoHealth = dinoHealth;
             this.dinoEnergy = dinoEnergy;
-            this.dinoAttackPower = dinoAttackPower
+            this.dinoAttackPower = dinoAttackPower;
             isAlive = true;
         }
+
+        // mem methods (can do)
 
         public void AttackRobot()
         {
@@ -49,7 +51,11 @@ namespace RobotsVDinos
 
         public void DinoDie()
         {
-
+            if (dinoHealth == 0 && isAlive == true)
+            {
+                isAlive = false;
+                Console.WriteLine("Dinosaur has died.");
+            }
         }
     }
 }
