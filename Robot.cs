@@ -23,7 +23,7 @@ namespace RobotsVDinos
             this.name = name;
             this.robotHealth = robotHealth;
             this.robotPowerLevel = robotPowerLevel;
-            this.isAlive = true;
+            isAlive = true;
         }
 
         //mem methods (can do)

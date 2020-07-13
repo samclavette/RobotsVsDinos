@@ -24,7 +24,32 @@ namespace RobotsVDinos
             this.dinoHealth = dinoHealth;
             this.dinoEnergy = dinoEnergy;
             this.dinoAttackPower = dinoAttackPower
-            this.isAlive = true;
+            isAlive = true;
+        }
+
+        public void AttackRobot()
+        {
+
+        }
+
+        public void DinoLoseHealth()
+        {
+
+        }
+
+        public void DinoLoseEnergy()
+        {
+
+        }
+
+        public void DinoGainEnergy()
+        {
+
+        }
+
+        public void DinoDie()
+        {
+
         }
     }
 }
