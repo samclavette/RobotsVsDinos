@@ -8,7 +8,7 @@ namespace RobotsVDinos
 {
     class Herd
     {
-        //mem variables 
+        //mem variables (has a) 
 
         Dinosaur dinoOne;
         Dinosaur dinoTwo;
@@ -23,7 +23,7 @@ namespace RobotsVDinos
             dinoThree = new Dinosaur("Mosasaurus", 200, 75, 50);
         }
 
-        //meme methods
+        //meme methods (can do)
     }
 
 }

@@ -22,6 +22,6 @@ namespace RobotsVDinos
             robotThree = new Robot("Iron Giant", 200, 75);
         }
 
-        //mem methods (can do)
+        //mem methods
     }
 }
