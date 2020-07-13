@@ -8,5 +8,23 @@ namespace RobotsVDinos
 {
     class Dinosaur
     {
+        // mem variables (has a)
+
+        string type;
+        int dinoHealth;
+        int dinoEnergy;
+        int dinoAttackPower;
+        bool isAlive;
+
+        //constructor (spawner)
+
+        public Dinosaur(string type, int dinoHealth, int dinoEnergy, int dinoAttackPower)
+        {
+            this.type = type;
+            this.dinoHealth = dinoHealth;
+            this.dinoEnergy = dinoEnergy;
+            this.dinoAttackPower = dinoAttackPower
+            this.isAlive = true;
+        }
     }
 }
