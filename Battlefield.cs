@@ -31,6 +31,7 @@ namespace RobotsVDinos
             Dinosaur attackingDino = herd.ChooseRandomDino();
             Robot defendingRobot = fleet.ChooseRandomRobot();
             attackingDino.AttackRobot(defendingRobot);
+            defendingRobot.RobotLoseHealth(attackingDino);
             //RobotLoseHealth(defendingRobot);
             //List<Robot> robotList = fleet.GetRobotFleet();
             //List<Dinosaur> dinoList = herd.GetHerd(); 
@@ -48,6 +49,7 @@ namespace RobotsVDinos
             Robot attackingRobot = fleet.ChooseRandomRobot();
             Dinosaur defendingDino = herd.ChooseRandomDino();
             attackingRobot.AttackDino(defendingDino);
+            defendingDino.DinoLoseHealth(attackingRobot);
             //List<Robot> robotList = fleet.GetRobotFleet();
             //List<Dinosaur> dinoList = herd.GetHerd();
 

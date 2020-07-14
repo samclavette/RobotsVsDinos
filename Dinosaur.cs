@@ -43,9 +43,9 @@ namespace RobotsVDinos
             return dinoHealth;
         }
 
-        public void DinoLoseHealth(int dinoHealthLost)
+        public void DinoLoseHealth(Robot robot)
         {
-            dinoHealth -= dinoHealthLost;
+            dinoHealth -= robot.robotAttackPower;
         }
 
         public int GetDinoEnergy()

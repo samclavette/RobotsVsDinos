@@ -32,13 +32,13 @@ namespace RobotsVDinos
         //happen in this class?  Think about the parameters and what would have to be passed in.  What do you need access to?
         public void AttackDino(Dinosaur dinosaur)
         {
-            dinosaur.dinoHealth -= weapon.attackPower;
+            dinosaur.dinoHealth -= ;
             //robotHealth
         }
 
-        public Weapon GetWeapon()
+        public void RobotAttackPower()
         {
-            return weapon;
+            weapon.attackPower;
         }
 
         public int RobotGetHealth()
@@ -46,9 +46,9 @@ namespace RobotsVDinos
             return robotHealth;
         }
 
-        public void RobotLoseHealth(int robotHealthLost)
+        public void RobotLoseHealth(Dinosaur dino)
         {
-            robotHealth -= robotHealthLost;
+            robotHealth -= dino.dinoAttackPower;
         }
 
         public int GetRobotHealth()
