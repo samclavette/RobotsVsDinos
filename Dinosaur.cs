@@ -28,6 +28,10 @@ namespace RobotsVDinos
         }
 
         // mem methods (can do)
+        public int GetDinoAttackPower()
+        {
+            return dinoAttackPower;
+        }
 
         public int GetDinoHealth()
         {

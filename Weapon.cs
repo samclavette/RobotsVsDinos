@@ -13,7 +13,6 @@ namespace RobotsVDinos
         string weaponType;
         int attackPower;
         int energyUsed;
-
          
         public Weapon(string weaponType, int attackPower, int energyUsed)
         {
