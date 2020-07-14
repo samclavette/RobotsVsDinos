@@ -14,6 +14,7 @@ namespace RobotsVDinos
         Dinosaur dinoTwo;
         Dinosaur dinoThree;
         public List<Dinosaur> dinoHerd = new List<Dinosaur>();
+        Random rand;
 
         //constructor 
 
@@ -22,21 +23,25 @@ namespace RobotsVDinos
             dinoOne = new Dinosaur("T-Rex", 250, 100, 75);
             dinoTwo = new Dinosaur("Raptor", 100, 25, 20);
             dinoThree = new Dinosaur("Mosasaurus", 200, 75, 50);
-            dinoHerd.Add(dinoOne);
-            dinoHerd.Add(dinoTwo);
-            dinoHerd.Add(dinoThree);
+            dinoHerd = GetHerd();
         }
 
         //meme methods (can do)
 
 
-        public Dinosaur GetDinoOne()
+        public Dinosaur ChooseRandomDino()
         {
-            return dinoOne;
+            rand = new Random();
+            int randomNumber = rand.Next(3);
+            return dinoHerd[randomNumber];
         }
         public List<Dinosaur> GetHerd()
         {
-            return dinoHerd;
+            List<Dinosaur> tempDinoList = new List<Dinosaur>();
+            tempDinoList.Add(dinoOne);
+            tempDinoList.Add(dinoTwo);
+            tempDinoList.Add(dinoThree);
+            return tempDinoList;
         }
     }
 

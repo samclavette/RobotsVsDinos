@@ -28,7 +28,10 @@ namespace RobotsVDinos
 
         public void DinoAttackRobot()
         {
-            fleet.robotFleet[0].AttackDino(herd.dinoHerd[0]);
+            Dinosaur attackingDino = herd.ChooseRandomDino();
+            Robot defendingRobot = fleet.ChooseRandomRobot();
+            attackingDino.AttackRobot(defendingRobot);
+            //RobotLoseHealth(defendingRobot);
             //List<Robot> robotList = fleet.GetRobotFleet();
             //List<Dinosaur> dinoList = herd.GetHerd(); 
             // randomly choose 1 robot. if alive continue to next step. if not choose another robot
@@ -42,9 +45,12 @@ namespace RobotsVDinos
 
         public void RobotAttackDino()
         {
+            Robot attackingRobot = fleet.ChooseRandomRobot();
+            Dinosaur defendingDino = herd.ChooseRandomDino();
+            attackingRobot.AttackDino(defendingDino);
             //List<Robot> robotList = fleet.GetRobotFleet();
             //List<Dinosaur> dinoList = herd.GetHerd();
-            
+
 
             //Dinosaur dinoOne = herd.GetDinoOne();
             //Robot robotOne = robotList.ElementAt(0);

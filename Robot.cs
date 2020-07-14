@@ -48,7 +48,7 @@ namespace RobotsVDinos
 
         public void RobotLoseHealth(int robotHealthLost)
         {
-            robotHealth = robotHealth - robotHealthLost;
+            robotHealth -= robotHealthLost;
         }
 
         public int GetRobotHealth()
