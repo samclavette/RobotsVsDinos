@@ -26,5 +26,10 @@ namespace RobotsVDinos
         {
             return attackPower;
         }
+
+        public int LoseEnergyUsed()
+        {
+            return energyUsed;
+        }
     }
 }

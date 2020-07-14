@@ -40,6 +40,7 @@ namespace RobotsVDinos
             dinoOne.DinoLoseHealth(robotOneSwordAttackPower);
             Console.WriteLine(dinoOne.GetDinoHealth());
             Console.ReadLine();
+
         }
     }
 }

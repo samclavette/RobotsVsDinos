@@ -13,6 +13,7 @@ namespace RobotsVDinos
         Dinosaur dinoOne;
         Dinosaur dinoTwo;
         Dinosaur dinoThree;
+        List<Dinosaur> dinoHerd = new List<Dinosaur>();
 
         //constructor 
 
@@ -21,6 +22,9 @@ namespace RobotsVDinos
             dinoOne = new Dinosaur("T-Rex", 250, 100, 75);
             dinoTwo = new Dinosaur("Raptor", 100, 25, 20);
             dinoThree = new Dinosaur("Mosasaurus", 200, 75, 50);
+            dinoHerd.Add(dinoOne);
+            dinoHerd.Add(dinoTwo);
+            dinoHerd.Add(dinoThree);
         }
 
         //meme methods (can do)
