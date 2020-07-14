@@ -27,11 +27,12 @@ namespace RobotsVDinos
         //mem methods
         public void RunBattlefield()
         {
-            while (fleet.robotFleet.Count > 0 && herd.dinoHerd.Count > 0)
+            do
             {
                 DinoAttackRobot();
                 RobotAttackDino();
             }
+            while (fleet.robotFleet.Count > 0 && herd.dinoHerd.Count > 0);
         }
         public void DinoAttackRobot()
         {

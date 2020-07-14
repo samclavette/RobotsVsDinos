@@ -10,13 +10,8 @@ namespace RobotsVDinos
     {
         static void Main(string[] args)
         {
-            Battlefield battlefield = new Battlefield();
-            battlefield.RobotAttackDino();
-            battlefield.DinoAttackRobot();
-            battlefield.RobotAttackDino();
-            battlefield.DinoAttackRobot();
-
-
+           Battlefield battlefield = new Battlefield();
+           battlefield.RunBattlefield();
         }
     }
 }
