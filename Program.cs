@@ -12,8 +12,11 @@ namespace RobotsVDinos
         {
             Battlefield battlefield = new Battlefield();
             battlefield.RobotAttackDino();
-            
-            
+            battlefield.DinoAttackRobot();
+            battlefield.RobotAttackDino();
+            battlefield.DinoAttackRobot();
+
+
         }
     }
 }

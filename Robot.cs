@@ -14,7 +14,7 @@ namespace RobotsVDinos
         public int robotHealth;
         int robotPowerLevel;
         bool isRobotAlive;
-        Weapon weapon;
+        public Weapon weapon;
 
         // constructor (spawner)
 
@@ -32,13 +32,8 @@ namespace RobotsVDinos
         //happen in this class?  Think about the parameters and what would have to be passed in.  What do you need access to?
         public void AttackDino(Dinosaur dinosaur)
         {
-            dinosaur.dinoHealth -= ;
+            dinosaur.dinoHealth -= weapon.attackPower;
             //robotHealth
-        }
-
-        public void RobotAttackPower()
-        {
-            weapon.attackPower;
         }
 
         public int RobotGetHealth()

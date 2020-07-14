@@ -25,23 +25,24 @@ namespace RobotsVDinos
         }
 
         //mem methods
-
+        public void RunBattlefield()
+        {
+            while (fleet.robotFleet.Count > 0 && herd.dinoHerd.Count > 0)
+            {
+                DinoAttackRobot();
+                RobotAttackDino();
+            }
+        }
         public void DinoAttackRobot()
         {
             Dinosaur attackingDino = herd.ChooseRandomDino();
             Robot defendingRobot = fleet.ChooseRandomRobot();
             attackingDino.AttackRobot(defendingRobot);
             defendingRobot.RobotLoseHealth(attackingDino);
-            //RobotLoseHealth(defendingRobot);
-            //List<Robot> robotList = fleet.GetRobotFleet();
-            //List<Dinosaur> dinoList = herd.GetHerd(); 
-            // randomly choose 1 robot. if alive continue to next step. if not choose another robot
-            // randomly choose 1 dino. if alive continue to next step. if not choose another dino
-            // get chosen dino attack number and energy used number
-            // get robot health number
-            // subtract dino attack number from robot health number. if <or= 0 print robot has died
-            // subtract dino energy from energy level. if <or= 0 print dino has died
-
+            if (defendingRobot.robotHealth <= 0)
+            {
+                fleet.robotFleet.Remove(defendingRobot);
+            }
         }
 
         public void RobotAttackDino()
@@ -50,19 +51,10 @@ namespace RobotsVDinos
             Dinosaur defendingDino = herd.ChooseRandomDino();
             attackingRobot.AttackDino(defendingDino);
             defendingDino.DinoLoseHealth(attackingRobot);
-            //List<Robot> robotList = fleet.GetRobotFleet();
-            //List<Dinosaur> dinoList = herd.GetHerd();
-
-
-            //Dinosaur dinoOne = herd.GetDinoOne();
-            //Robot robotOne = robotList.ElementAt(0);
-            //Weapon robotOneSword = robotOne.GetWeapon();
-            //int robotOneSwordAttackPower = robotOneSword.GetAttackPower();
-            //int dinoOneHealth = dinoOne.GetDinoHealth();
-            //Console.WriteLine(dinoOneHealth);
-            //dinoOne.DinoLoseHealth(robotOneSwordAttackPower);
-            //Console.WriteLine(dinoOne.GetDinoHealth());
-            //Console.ReadLine();
+            if (attackingRobot.robotHealth <= 0)
+            {
+                fleet.robotFleet.Remove(attackingRobot);
+            }
 
         }
     }
