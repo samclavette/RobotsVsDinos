@@ -33,24 +33,20 @@ namespace RobotsVDinos
         {
             return dinoHealth;
         }
-        public void AttackRobot()
-        {
-        
-        }
 
         public void DinoLoseHealth(int healthLost)
         {
             dinoHealth = dinoHealth - healthLost;
         }
 
-        public void DinoLoseEnergy()
+        public int GetDinoEnergy()
         {
-
+            return dinoEnergy;
         }
 
-        public void DinoGainEnergy()
+        public void DinoLoseEnergy(int energyLost)
         {
-
+            dinoEnergy = dinoEnergy - energyLost;
         }
 
         public void DinoDie()

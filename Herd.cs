@@ -34,9 +34,9 @@ namespace RobotsVDinos
         {
             return dinoOne;
         }
-        public void GetHerd()
+        public List<Dinosaur> GetHerd()
         {
-
+            return dinoHerd;
         }
     }
 

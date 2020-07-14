@@ -19,6 +19,9 @@ namespace RobotsVDinos
         {
             fleet = new Fleet();
             herd = new Herd();
+            List<Robot> robotList = fleet.GetRobotFleet();
+            List<Dinosaur> dinoList = herd.GetHerd();
+
         }
 
         //mem methods
@@ -31,6 +34,8 @@ namespace RobotsVDinos
         public void RobotAttackDino()
         {
             List<Robot> robotList = fleet.GetRobotFleet();
+            List<Dinosaur> dinoList = herd.GetHerd();
+
             Dinosaur dinoOne = herd.GetDinoOne();
             Robot robotOne = robotList.ElementAt(0);
             Weapon robotOneSword = robotOne.GetWeapon();

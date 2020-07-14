@@ -27,38 +27,29 @@ namespace RobotsVDinos
             this.weapon = weapon; 
         }
 
-        public string getName()
-        {
-            return name;
-        }
-
-        public void SetName(string name)
-        {
-            this.name = name;
-        }
         //mem methods (can do)
 
         public Weapon GetWeapon()
         {
             return weapon;
         }
-        public void AttackDino()
+
+        public int RobotGetHealth()
         {
-            //
+            return robotHealth;
+        }
+
+        public void RobotLoseHealth()
+        {
 
         }
 
-        public void LoseHealth()
+        public int GetRobotHealth()
         {
-
+            return robotHealth;
         }
 
         public void LosePowerLevel()
-        {
-
-        }
-
-        public void GainPowerLevel()
         {
 
         }
