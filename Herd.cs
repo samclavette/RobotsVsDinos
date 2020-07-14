@@ -13,7 +13,7 @@ namespace RobotsVDinos
         Dinosaur dinoOne;
         Dinosaur dinoTwo;
         Dinosaur dinoThree;
-        List<Dinosaur> dinoHerd = new List<Dinosaur>();
+        public List<Dinosaur> dinoHerd = new List<Dinosaur>();
 
         //constructor 
 

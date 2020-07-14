@@ -11,7 +11,7 @@ namespace RobotsVDinos
     {
         //mem variables
         string weaponType;
-        int attackPower;
+        public int attackPower;
         int energyUsed;
          
         public Weapon(string weaponType, int attackPower, int energyUsed)

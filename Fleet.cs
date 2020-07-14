@@ -13,7 +13,8 @@ namespace RobotsVDinos
         Robot robotOne;
         Robot robotTwo;
         Robot robotThree;
-        List<Robot> robotFleet = new List<Robot>();
+        public List<Robot> robotFleet;
+        Random rand;
         List<Weapon> weaponList = new List<Weapon>();
     
 
@@ -26,18 +27,25 @@ namespace RobotsVDinos
             robotOne = new Robot("Wall-E", 100, 25, sword);
             robotTwo = new Robot("Ultron", 250, 100, toothbrush);
             robotThree = new Robot("Iron Giant", 200, 75, bazooka);
-            robotFleet.Add(robotOne);
-            robotFleet.Add(robotTwo);
-            robotFleet.Add(robotThree);
-            //robotFleet[0] = robotOne;
-            //robotFleet[1] = robotTwo;
-            //robotFleet[2] = robotThree;
+            //rand = new Random();
+            robotFleet = GetRobotFleet();
         }
 
         //mem methods
         public List<Robot> GetRobotFleet()
         {
-            return robotFleet;
+            List<Robot> tempRobotFleet = new List<Robot>();
+            tempRobotFleet.Add(robotOne);
+            tempRobotFleet.Add(robotTwo);
+            tempRobotFleet.Add(robotThree);
+            return tempRobotFleet;
+        }
+
+        public Robot ChooseRandomRobot()
+        {
+            rand = new Random();
+            int randomNumber = rand.Next(3);
+            return robotFleet[randomNumber];
         }
     }
 }

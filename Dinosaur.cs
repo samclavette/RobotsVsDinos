@@ -10,11 +10,11 @@ namespace RobotsVDinos
     {
         // mem variables (has a)
 
-        string type;
-        int dinoHealth;
-        int dinoEnergy;
-        int dinoAttackPower;
-        bool isDinoAlive;
+        public string type;
+        public int dinoHealth;
+        public int dinoEnergy;
+        public int dinoAttackPower;
+        public bool isDinoAlive;
 
         // constructor (spawner)
 
@@ -28,6 +28,11 @@ namespace RobotsVDinos
         }
 
         // mem methods (can do)
+
+        public void AttackRobot(Robot robot)
+        {
+            robot.robotHealth -= dinoAttackPower;
+        }
         public int GetDinoAttackPower()
         {
             return dinoAttackPower;
