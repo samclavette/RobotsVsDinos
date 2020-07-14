@@ -34,9 +34,9 @@ namespace RobotsVDinos
             return dinoHealth;
         }
 
-        public void DinoLoseHealth(int healthLost)
+        public void DinoLoseHealth(int dinoHealthLost)
         {
-            dinoHealth = dinoHealth - healthLost;
+            dinoHealth = dinoHealth - dinoHealthLost;
         }
 
         public int GetDinoEnergy()
@@ -44,9 +44,9 @@ namespace RobotsVDinos
             return dinoEnergy;
         }
 
-        public void DinoLoseEnergy(int energyLost)
+        public void DinoLoseEnergy(int dinoEnergyLost)
         {
-            dinoEnergy = dinoEnergy - energyLost;
+            dinoEnergy = dinoEnergy - dinoEnergyLost;
         }
 
         public void DinoDie()
@@ -54,7 +54,7 @@ namespace RobotsVDinos
             if (dinoHealth == 0 && isAlive == true)
             {
                 isAlive = false;
-                Console.WriteLine("Dinosaur has died.");
+                Console.WriteLine("Dinosaur is dead.");
             }
         }
     }

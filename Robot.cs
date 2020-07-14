@@ -13,7 +13,7 @@ namespace RobotsVDinos
         string name;
         int robotHealth;
         int robotPowerLevel;
-        bool isAlive;
+        bool isRobotAlive;
         Weapon weapon;
 
         // constructor (spawner)
@@ -23,7 +23,7 @@ namespace RobotsVDinos
             this.name = name;
             this.robotHealth = robotHealth;
             this.robotPowerLevel = robotPowerLevel;
-            isAlive = true;
+            isRobotAlive = true;
             this.weapon = weapon; 
         }
 
@@ -39,9 +39,9 @@ namespace RobotsVDinos
             return robotHealth;
         }
 
-        public void RobotLoseHealth()
+        public void RobotLoseHealth(int robotHealthLost)
         {
-
+            robotHealth = robotHealth - robotHealthLost;
         }
 
         public int GetRobotHealth()
@@ -49,17 +49,17 @@ namespace RobotsVDinos
             return robotHealth;
         }
 
-        public void LosePowerLevel()
+        public void RobotLosePowerLevel(int robotPowerLost)
         {
-
+            robotPowerLevel = robotPowerLevel - robotPowerLost;
         }
 
         public void RobotDie()
         {
-            if (robotHealth == 0
-                )
+            if (robotHealth == 0 && isRobotAlive == true)
             {
-                Console.WriteLine("Robot has died.");
+                isRobotAlive = false;
+                Console.WriteLine("Robot is dead.");
             }
         }
     }
