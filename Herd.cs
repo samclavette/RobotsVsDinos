@@ -24,6 +24,16 @@ namespace RobotsVDinos
         }
 
         //meme methods (can do)
+
+
+        public Dinosaur GetDinoOne()
+        {
+            return dinoOne;
+        }
+        public void GetHerd()
+        {
+
+        }
     }
 
 }

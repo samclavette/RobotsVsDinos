@@ -18,12 +18,13 @@ namespace RobotsVDinos
 
         // constructor (spawner)
 
-        public Robot(string name, int robotHealth, int robotPowerLevel)
+        public Robot(string name, int robotHealth, int robotPowerLevel, Weapon weapon)
         {
             this.name = name;
             this.robotHealth = robotHealth;
             this.robotPowerLevel = robotPowerLevel;
             isAlive = true;
+            this.weapon = weapon; 
         }
 
         public string getName()
@@ -37,9 +38,9 @@ namespace RobotsVDinos
         }
         //mem methods (can do)
 
-        public void ChooseWeapon()
+        public Weapon GetWeapon()
         {
-
+            return weapon;
         }
         public void AttackDino()
         {

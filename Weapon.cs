@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace RobotsVDinos
         string weaponType;
         int attackPower;
         int energyUsed;
+
          
         public Weapon(string weaponType, int attackPower, int energyUsed)
         {
@@ -20,6 +22,9 @@ namespace RobotsVDinos
             this.energyUsed = energyUsed;
         }
         //mem methods 
-
+        public int GetAttackPower()
+        {
+            return attackPower;
+        }
     }
 }

@@ -17,8 +17,25 @@ namespace RobotsVDinos
 
         public Battlefield()
         {
-            Fleet fleet = new Fleet();
-            Herd herd = new Herd();
+            fleet = new Fleet();
+            herd = new Herd();
+        }
+
+        //mem methods
+
+        public void DinoAttackRobot()
+        {
+            //List<Dinosaur> dinoList = herd.GetHerd();
+        }
+
+        public void RobotAttackDino()
+        {
+            List<Robot> robotList = fleet.GetRobotFleet();
+            Dinosaur dinoOne = herd.GetDinoOne();
+            Robot robotOne = robotList.ElementAt(0);
+            Weapon robotOneSword = robotOne.GetWeapon();
+            Console.WriteLine(robotOneSword.GetAttackPower());
+            Console.ReadLine();
         }
     }
 }

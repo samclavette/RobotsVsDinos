@@ -13,15 +13,26 @@ namespace RobotsVDinos
         Robot robotOne;
         Robot robotTwo;
         Robot robotThree;
+        List<Robot> robotFleet = new List<Robot>();
 
         //constructor (spawner)
         public Fleet()
         {
-            robotOne = new Robot("Wall-E", 100, 25);
-            robotTwo = new Robot("Ultron", 250, 100);
-            robotThree = new Robot("Iron Giant", 200, 75);
+            Weapon sword = new Weapon("sword", 25, 10);
+            Weapon toothbrush = new Weapon("toothbrush", 30, 15);
+            Weapon bazooka = new Weapon("bazooka", 40, 40);
+            robotOne = new Robot("Wall-E", 100, 25, sword);
+            robotTwo = new Robot("Ultron", 250, 100, toothbrush);
+            robotThree = new Robot("Iron Giant", 200, 75, bazooka);
+            robotFleet.Add(robotOne);
+            robotFleet.Add(robotTwo);
+            robotFleet.Add(robotThree);
         }
 
         //mem methods
+        public List<Robot> GetRobotFleet()
+        {
+            return robotFleet;
+        }
     }
 }
