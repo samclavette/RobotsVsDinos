@@ -15,6 +15,7 @@ namespace RobotsVDinos
         Robot robotThree;
         List<Robot> robotFleet = new List<Robot>();
         List<Weapon> weaponList = new List<Weapon>();
+    
 
         //constructor 
         public Fleet()
@@ -28,6 +29,9 @@ namespace RobotsVDinos
             robotFleet.Add(robotOne);
             robotFleet.Add(robotTwo);
             robotFleet.Add(robotThree);
+            //robotFleet[0] = robotOne;
+            //robotFleet[1] = robotTwo;
+            //robotFleet[2] = robotThree;
         }
 
         //mem methods
