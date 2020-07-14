@@ -14,7 +14,7 @@ namespace RobotsVDinos
         int robotHealth;
         int robotPowerLevel;
         bool isAlive;
-        public Weapon weapon;
+        Weapon weapon;
 
         // constructor (spawner)
 
@@ -26,8 +26,21 @@ namespace RobotsVDinos
             isAlive = true;
         }
 
+        public string getName()
+        {
+            return name;
+        }
+
+        public void SetName(string name)
+        {
+            this.name = name;
+        }
         //mem methods (can do)
 
+        public void ChooseWeapon()
+        {
+
+        }
         public void AttackDino()
         {
             //

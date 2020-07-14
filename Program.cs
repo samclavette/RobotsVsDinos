@@ -10,6 +10,12 @@ namespace RobotsVDinos
     {
         static void Main(string[] args)
         {
+            Battlefield battlefield = new Battlefield();
+            Robot bitch = new Robot("Bitch", 50, 50);
+            Console.WriteLine(bitch.getName());
+            bitch.SetName("Cocksmith");
+            Console.WriteLine(bitch.getName());
+            Console.ReadLine();
         }
     }
 }

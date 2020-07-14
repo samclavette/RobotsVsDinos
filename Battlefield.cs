@@ -8,5 +8,17 @@ namespace RobotsVDinos
 {
     class Battlefield
     {
+        //mem variables
+
+        Fleet fleet;
+        Herd herd;
+
+        // constructor
+
+        public Battlefield()
+        {
+            Fleet fleet = new Fleet();
+            Herd herd = new Herd();
+        }
     }
 }
