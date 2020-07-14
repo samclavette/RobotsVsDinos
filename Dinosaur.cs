@@ -29,14 +29,18 @@ namespace RobotsVDinos
 
         // mem methods (can do)
 
+        public int GetDinoHealth()
+        {
+            return dinoHealth;
+        }
         public void AttackRobot()
         {
         
         }
 
-        public void DinoLoseHealth()
+        public void DinoLoseHealth(int healthLost)
         {
-
+            dinoHealth = dinoHealth - healthLost;
         }
 
         public void DinoLoseEnergy()

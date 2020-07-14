@@ -34,7 +34,11 @@ namespace RobotsVDinos
             Dinosaur dinoOne = herd.GetDinoOne();
             Robot robotOne = robotList.ElementAt(0);
             Weapon robotOneSword = robotOne.GetWeapon();
-            Console.WriteLine(robotOneSword.GetAttackPower());
+            int robotOneSwordAttackPower = robotOneSword.GetAttackPower();
+            int dinoOneHealth = dinoOne.GetDinoHealth();
+            Console.WriteLine(dinoOneHealth);
+            dinoOne.DinoLoseHealth(robotOneSwordAttackPower);
+            Console.WriteLine(dinoOne.GetDinoHealth());
             Console.ReadLine();
         }
     }
