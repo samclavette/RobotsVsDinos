@@ -12,6 +12,7 @@ namespace RobotsVDinos
         {
            Battlefield battlefield = new Battlefield();
            battlefield.RunBattlefield();
+           Console.WriteLine("fuck you"); 
         }
     }
 }

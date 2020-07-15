@@ -24,9 +24,9 @@ namespace RobotsVDinos
             Weapon sword = new Weapon("sword", 25, 10);
             Weapon toothbrush = new Weapon("toothbrush", 10, 10);
             Weapon bazooka = new Weapon("bazooka", 50, 10);
-            robotOne = new Robot("Wall-E", 100, 25, sword);
-            robotTwo = new Robot("Ultron", 250, 100, toothbrush);
-            robotThree = new Robot("Iron Giant", 200, 75, bazooka);
+            robotOne = new Robot("Wall-E", 10, 25, sword);
+            robotTwo = new Robot("Ultron", 25, 100, toothbrush);
+            robotThree = new Robot("Iron Giant", 20, 75, bazooka);
             //rand = new Random();
             robotFleet = GetRobotFleet();
         }

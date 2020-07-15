@@ -29,8 +29,14 @@ namespace RobotsVDinos
         {
             while (fleet.robotFleet.Count > 0 && herd.dinoHerd.Count > 0) 
             {
-                DinoAttackRobot();
-                RobotAttackDino();
+                if (fleet.robotFleet.Count > 0)
+                {
+                    DinoAttackRobot();
+                }
+                else if (fleet.robotFleet.Count > 0)
+                {
+                    RobotAttackDino();
+                }
             }
             
         }
