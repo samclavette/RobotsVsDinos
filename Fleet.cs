@@ -43,9 +43,9 @@ namespace RobotsVDinos
 
         public Robot ChooseRandomRobot()
         {
-            rand = new Random();
-            int randomNumber = rand.Next(3);
-            return robotFleet[randomNumber];
+              rand = new Random();
+              int randomNumber = rand.Next(robotFleet.Count);
+              return robotFleet[randomNumber];
         }
     }
 }

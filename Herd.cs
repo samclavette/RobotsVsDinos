@@ -32,7 +32,7 @@ namespace RobotsVDinos
         public Dinosaur ChooseRandomDino()
         {
             rand = new Random();
-            int randomNumber = rand.Next(3);
+            int randomNumber = rand.Next(dinoHerd.Count);
             return dinoHerd[randomNumber];
         }
         public List<Dinosaur> GetHerd()
