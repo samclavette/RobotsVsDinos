@@ -11,8 +11,7 @@ namespace RobotsVDinos
         static void Main(string[] args)
         {
            Battlefield battlefield = new Battlefield();
-           battlefield.RunBattlefield();
-           Console.WriteLine("fuck you"); 
+           battlefield.RunBattlefield(); 
         }
     }
 }

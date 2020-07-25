@@ -10,10 +10,10 @@ namespace RobotsVDinos
     class Robot
     {
         // mem variables (has a)
-        string name;
+        public string name;
         public int robotHealth;
-        int robotPowerLevel;
-        bool isRobotAlive;
+        public int robotPowerLevel;
+        public bool isRobotAlive;
         public Weapon weapon;
 
         // constructor (spawner)

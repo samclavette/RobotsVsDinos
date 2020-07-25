@@ -29,11 +29,9 @@ namespace RobotsVDinos
         {
             while (fleet.robotFleet.Count > 0 && herd.dinoHerd.Count > 0) 
             {
-                if (fleet.robotFleet.Count > 0)
-                {
-                    DinoAttackRobot();
-                }
-                else if (fleet.robotFleet.Count > 0)
+                DinoAttackRobot();
+                bool robotStatus = CheckForLivingRobot();
+                if (robotStatus == true)
                 {
                     RobotAttackDino();
                 }
@@ -45,10 +43,11 @@ namespace RobotsVDinos
             Dinosaur attackingDino = herd.ChooseRandomDino();
             Robot defendingRobot = fleet.ChooseRandomRobot();
             attackingDino.AttackRobot(defendingRobot);
-            defendingRobot.RobotLoseHealth(attackingDino);
+            //defendingRobot.RobotLoseHealth(attackingDino);
             if (defendingRobot.robotHealth <= 0)
             {
                 fleet.robotFleet.Remove(defendingRobot);
+                Console.WriteLine(defendingRobot.name + "has died.");
             }
         }
 
@@ -57,12 +56,23 @@ namespace RobotsVDinos
             Robot attackingRobot = fleet.ChooseRandomRobot();
             Dinosaur defendingDino = herd.ChooseRandomDino();
             attackingRobot.AttackDino(defendingDino);
-            defendingDino.DinoLoseHealth(attackingRobot);
-            if (attackingRobot.robotHealth <= 0)
+            //defendingDino.DinoLoseHealth(attackingRobot);
+            if (defendingDino.dinoHealth <= 0)
             {
-                fleet.robotFleet.Remove(attackingRobot);
+                herd.dinoHerd.Remove(defendingDino);
+                Console.WriteLine(defendingDino.type + "has died.");
             }
 
+        }
+
+        public bool CheckForLivingRobot()
+        {
+            if (fleet.robotFleet.Count == 0)
+            {
+                Console.WriteLine("Dinos win!");
+                return false;
+            }
+            return true;
         }
     }
 }
