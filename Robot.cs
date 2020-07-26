@@ -13,7 +13,6 @@ namespace RobotsVDinos
         public string name;
         public int robotHealth;
         public int robotPowerLevel;
-        public bool isRobotAlive;
         public Weapon weapon;
 
         // constructor (spawner)
@@ -23,7 +22,6 @@ namespace RobotsVDinos
             this.name = name;
             this.robotHealth = robotHealth;
             this.robotPowerLevel = robotPowerLevel;
-            isRobotAlive = true;
             this.weapon = weapon; 
         }
 
@@ -36,20 +34,20 @@ namespace RobotsVDinos
             //robotHealth
         }
 
-        public int RobotGetHealth()
-        {
-            return robotHealth;
-        }
+        //public int RobotGetHealth()
+        //{
+        //    return robotHealth;
+        //}
 
         public void RobotLoseHealth(Dinosaur dino)
         {
             robotHealth -= dino.dinoAttackPower;
         }
 
-        public int GetRobotHealth()
-        {
-            return robotHealth;
-        }
+        //public int GetRobotHealth()
+        //{
+        //    return robotHealth;
+        //}
 
         public void RobotLosePowerLevel(int robotPowerLost)
         {

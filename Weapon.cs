@@ -21,14 +21,14 @@ namespace RobotsVDinos
             this.energyUsed = energyUsed;
         }
         //mem methods 
-        public int GetAttackPower()
-        {
-            return attackPower;
-        }
+        //public int GetAttackPower()
+        //{
+        //    return attackPower;
+        //}
 
-        public int LoseEnergyUsed()
-        {
-            return energyUsed;
-        }
+        //public int LoseEnergyUsed()
+        //{
+        //    return energyUsed;
+        //}
     }
 }

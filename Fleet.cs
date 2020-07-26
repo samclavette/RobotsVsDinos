@@ -15,7 +15,7 @@ namespace RobotsVDinos
         Robot robotThree;
         public List<Robot> robotFleet;
         Random rand;
-        List<Weapon> weaponList = new List<Weapon>();
+        List<Weapon> weaponList;
     
 
         //constructor 
@@ -24,11 +24,14 @@ namespace RobotsVDinos
             Weapon sword = new Weapon("sword", 50, 10);
             Weapon toothbrush = new Weapon("toothbrush", 20, 10);
             Weapon bazooka = new Weapon("bazooka", 75, 10);
-            robotOne = new Robot("Wall-E", 120, 25, sword);
-            robotTwo = new Robot("Ultron", 225, 100, toothbrush);
-            robotThree = new Robot("Iron Giant", 220, 75, bazooka);
+            weaponList = new List<Weapon>() { sword, toothbrush, bazooka };
+            Weapon randomWeapon = ChooseRandomWeapon();
+            robotOne = new Robot("Wall-E", 120, 25, randomWeapon);
+            robotTwo = new Robot("Ultron", 225, 100, randomWeapon);
+            robotThree = new Robot("Iron Giant", 220, 75, randomWeapon);
             //rand = new Random();
             robotFleet = GetRobotFleet();
+
         }
 
         //mem methods
@@ -46,6 +49,13 @@ namespace RobotsVDinos
               rand = new Random();
               int randomNumber = rand.Next(robotFleet.Count);
               return robotFleet[randomNumber];
+        }
+
+        public Weapon ChooseRandomWeapon()
+        {
+            rand = new Random();
+            int randomNumber = rand.Next(weaponList.Count);
+            return weaponList[randomNumber];
         }
     }
 }
