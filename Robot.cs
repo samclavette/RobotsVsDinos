@@ -56,13 +56,13 @@ namespace RobotsVDinos
             robotPowerLevel = robotPowerLevel - robotPowerLost;
         }
 
-        public void RobotDie()
-        {
-            if (robotHealth == 0 && isRobotAlive == true)
-            {
-                isRobotAlive = false;
-                Console.WriteLine("Robot is dead.");
-            }
-        }
+        //public void RobotDie()
+        //{
+        //    if (robotHealth == 0 && isRobotAlive == true)
+        //    {
+        //        isRobotAlive = false;
+        //        Console.WriteLine("Robot is dead.");
+        //    }
+        //}
     }
 }
